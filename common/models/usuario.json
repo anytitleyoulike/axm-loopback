@@ -43,7 +43,7 @@
       },
       "_selectable": false
     },
-    "nomeUsuario": {
+    "nome": {
       "type": "String",
       "required": true,
       "length": 100,

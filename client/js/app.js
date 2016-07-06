@@ -47,4 +47,17 @@ angular.module('axm-loopback', ['ui.router','lbServices'])
 			controller : "CompraListaController"
 		})
 
+		//Usuário
+		.state('listaUsuario', {
+			url : "/lista-usuario",
+			templateUrl : "views/usuario/listaUsuario.html",
+			controller : "UsuarioListaController"
+		})
+
+		.state('adicionaUsuario',{
+			url : '/adiciona-usuario',
+			templateUrl : "views/usuario/adicionaUsuario.html",
+			controller : "UsuarioAdicionaController"
+		})
+
 	}]);

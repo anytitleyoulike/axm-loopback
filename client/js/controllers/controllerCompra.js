@@ -31,4 +31,4 @@ angular.module('axm-loopback')
 			 	 console.log(res);
 			 })
 		}
-	}])
+	}]);
