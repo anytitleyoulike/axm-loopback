@@ -1,17 +1,19 @@
-]<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
 	<title>Compras</title>
 </head>
 <body>
 
-<form ng-submit="adicionarFonecedor();">
+<form ng-submit="adicionaCompra();">
 
 	<legend>Nova Compra</legend>
 	<div class="form-group">
 
-		<label>Fornecedor</label>
-		<input type="text" class="form-control" ng-model="form.nome">
+		<label>Produto</label>
+		<select  class="form-control" ng-model="form.produtoId">
+			<option ng-repeat="p in produtos" value="{{p.id}}">{{p.nome}}</option>
+		</select>
 
 		<label>Quantidade</label>
 		<input type="text" class="form-control" ng-model="form.quantidade">
@@ -20,7 +22,9 @@
 		<input type="text" class="form-control" ng-model="form.valueProduct">
 
 		<label>Fornecedor</label>
-		<input type="text" class="form-control" ng-model="form.cpf">
+		<select  class="form-control" ng-model="form.fornecedorId">
+			<option ng-repeat="f in fornecedores" value="{{f.id}}">{{f.nome}}</option>
+		</select>
 	</div>
 
 	<button type="submit" class="btn btn-primary">Cadastro</button>

@@ -18,10 +18,17 @@ angular.module('axm-loopback')
 		listaCompras();
 	}])
 
-	.controller('CompraAdicionaController', ['$scope','$state','Compra', function ($scope,$state,Compra) {
+	.controller('CompraAdicionaController', ['$scope','$state','Compra','Fornecedor','Produto', function ($scope,$state,Compra,Fornecedor,Produto) {
 		$scope.form ={};
+		$scope.fornecedores = Fornecedor.find();
+		$scope.produtos = Produto.find();
 
 		$scope.adicionaCompra = function () {
-			 console.log('blalalblalba');
+			 $scope.form.id = 0;
+			 $scope.form.dataCriacao = new Date();
+
+			 Compra.create($scope.form, function (res,err) {
+			 	 console.log(res);
+			 })
 		}
 	}])
