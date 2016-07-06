@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<h2>Lista de Usuários</h2>
+<hr>
+<div>
+	<a href="#/adiciona-usuário" class="btn btn-large btn-primary">Novo</a>
+</div>
+<br>
+<div class="table-responsive col-md-8">
+	<table class="table table-hover">
+		<thead>
+			<tr>
+				<th>Nome</th>
+				<th>Data de Criação</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="usuario in usuarios">
+				<td>{{usuario.nome}}</td>
+				<td>{{usuario.dataCriacao | date:'dd-MM-yy'}}</td>
+			</tr>
+		</tbody>
+	</div>
+</div>
+
+</body>
+</html>
