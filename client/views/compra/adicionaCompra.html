@@ -1,0 +1,31 @@
+]<!DOCTYPE html>
+<html>
+<head>
+	<title>Compras</title>
+</head>
+<body>
+
+<form ng-submit="adicionarFonecedor();">
+
+	<legend>Nova Compra</legend>
+	<div class="form-group">
+
+		<label>Fornecedor</label>
+		<input type="text" class="form-control" ng-model="form.nome">
+
+		<label>Quantidade</label>
+		<input type="text" class="form-control" ng-model="form.quantidade">
+
+		<label>Valor</label>
+		<input type="text" class="form-control" ng-model="form.valueProduct">
+
+		<label>Fornecedor</label>
+		<input type="text" class="form-control" ng-model="form.cpf">
+	</div>
+
+	<button type="submit" class="btn btn-primary">Cadastro</button>
+
+</form>
+
+</body>
+</html>

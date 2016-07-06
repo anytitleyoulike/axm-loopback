@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Lista de Fornecedores</title>
+</head>
+<body>
+
+<h2>Lista de Fornecedores</h2>
+<hr>
+<div>
+	<a href="#/adiciona-fornecedor" class="btn btn-large btn-primary">Novo</a>
+</div>
+<br>
+<div class="table-responsive">
+	<table class="table table-hover">
+		<thead>
+			<tr>
+				<th>Nome</th>
+				<th>Fone</th>
+				<th>Email</th>
+				<th>CPF</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="fornecedor in fornecedores">
+				<td>{{fornecedor.nome}}</td>
+				<td>{{fornecedor.fone}}</td>
+				<td>{{fornecedor.email}}</td>
+				<td>{{fornecedor.cpf}}</td>
+			</tr>
+		</tbody>
+	</div>
+</div>
+
+</body>
+</html>

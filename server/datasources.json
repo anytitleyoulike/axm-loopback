@@ -1,0 +1,12 @@
+{
+  "axm-db": {
+    "host": "localhost",
+    "port": 3306,
+    "url": "",
+    "database": "axm",
+    "password": "root",
+    "name": "axm-db",
+    "user": "root",
+    "connector": "mysql"
+  }
+}
