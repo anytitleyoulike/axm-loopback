@@ -60,6 +60,12 @@ angular.module('axm-loopback', ['ui.router','lbServices'])
 			controller : "UsuarioAdicionaController"
 		})
 
+		.state('editaUsuario', {
+			'url' : '/edita-usuario/:id',
+			'templateUrl' : 'views/usuario/editaUsuario.html',
+			'controller' : 'UsuarioEditaController'
+		})
+
 		.state('adicionaBaixa', {
 			url : "/adiciona-baixa",
 			templateUrl : "views/baixa/adicionaBaixa.html",
