@@ -61,7 +61,18 @@
     }
   },
   "validations": [],
-  "relations": {},
+  "relations": {
+    "produtoSolicitacaoBaixaEstoques": {
+      "type": "hasMany",
+      "model": "ProdutoSolicitacaoBaixaEstoque",
+      "foreignKey": ""
+    },
+    "compra": {
+      "type": "hasMany",
+      "model": "Compra",
+      "foreignKey": ""
+    }
+  },
   "acls": [],
   "methods": {}
 }

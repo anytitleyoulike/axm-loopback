@@ -3,7 +3,7 @@
 angular
 	.module("axm-loopback")
 
-	.controller('ProdutoListaController',['$scope','$state','Produto', function($scope,$state,Produto) {
+	.controller('ProdutoListaController',['$scope','Produto', function($scope,Produto) {
 
 		function listaProduto(){
 
