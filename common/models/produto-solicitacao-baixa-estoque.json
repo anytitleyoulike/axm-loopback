@@ -79,7 +79,18 @@
     }
   },
   "validations": [],
-  "relations": {},
+  "relations": {
+    "usuario": {
+      "type": "belongsTo",
+      "model": "Usuario",
+      "foreignKey": ""
+    },
+    "produto": {
+      "type": "belongsTo",
+      "model": "Produto",
+      "foreignKey": ""
+    }
+  },
   "acls": [],
   "methods": {}
 }

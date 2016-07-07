@@ -61,7 +61,13 @@
     }
   },
   "validations": [],
-  "relations": {},
+  "relations": {
+    "produtoSolicitacaoBaixaEstoques": {
+      "type": "hasMany",
+      "model": "ProdutoSolicitacaoBaixaEstoque",
+      "foreignKey": ""
+    }
+  },
   "acls": [],
   "methods": {}
 }

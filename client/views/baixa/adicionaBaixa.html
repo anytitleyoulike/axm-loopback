@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+<body>
+
+<form>
+
+	<legend>Nova Baixa</legend>
+	<div class="form-group">
+
+		<label>Produto</label>
+		<select  class="form-control" ng-model="baixa.produtoId">
+			<option ng-repeat="p in produtos" value="{{p.id}}">{{p.nome}}</option>
+		</select>
+
+		<label>Quantidade</label>
+		<input type="text" class="form-control" ng-model="baixa.quantidade">
+
+		<label>Usuário</label>
+		<select  class="form-control" ng-model="baixa.usuarioId">
+			<option ng-repeat="u in usuarios" value="{{u.id}}">{{u.nome}}</option>
+		</select>
+	</div>
+
+	<button type="submit" ng-click="adicionaBaixa(baixa)" class="btn btn-primary">Cadastro</button>
+
+</form>
+
+</body>
+</html>
