@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Compras</title>
+</head>
+<body>
+
+<form>
+
+	<legend>Edita Compra</legend>
+	<div class="form-group">
+
+		<label>Produto</label>
+		<select  class="form-control" ng-model="compra.produtoId"
+		ng-options="produto.id as produto.nome for produto in produtos">
+
+		</select>
+		<label>Quantidade</label>
+		<input type="text" class="form-control" ng-model="compra.quantidade">
+
+		<label>Valor</label>
+		<input type="text" class="form-control" ng-model="compra.valueProduct">
+
+		<label>Fornecedor</label>
+		<select  class="form-control" ng-model="compra.fornecedorId"
+		ng-options="fornecedor.id as fornecedor.nome for fornecedor in fornecedores">
+		</select>
+	</div>
+
+	<button type="submit" ng-click="editaCompra(compra)"class="btn btn-primary">Salvar</button>
+
+</form>
+
+</body>
+</html>
