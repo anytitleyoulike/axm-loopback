@@ -90,4 +90,10 @@ angular.module('axm-loopback', ['ui.router','lbServices'])
 			controller : "BaixaListaController"
 		})
 
+		.state('editaBaixa', {
+			url : "/edita-baixa/:id",
+			templateUrl : "views/baixa/editaBaixa.html",
+			controller : "EditaBaixaController"
+		})
+
 	}]);

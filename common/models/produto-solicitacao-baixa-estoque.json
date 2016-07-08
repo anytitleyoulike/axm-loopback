@@ -45,7 +45,7 @@
     },
     "produtoId": {
       "type": "Number",
-      "id": true,
+      "id": false,
       "required": true,
       "length": null,
       "precision": 10,
@@ -62,7 +62,7 @@
     },
     "usuarioId": {
       "type": "Number",
-      "id": true,
+      "id": false,
       "required": true,
       "length": null,
       "precision": 10,
