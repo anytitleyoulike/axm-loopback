@@ -93,7 +93,13 @@
     }
   },
   "validations": [],
-  "relations": {},
+  "relations": {
+    "compras": {
+      "type": "hasMany",
+      "model": "Compra",
+      "foreignKey": ""
+    }
+  },
   "acls": [],
   "methods": {}
 }

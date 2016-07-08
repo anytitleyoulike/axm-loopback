@@ -77,7 +77,7 @@
     },
     "produtoId": {
       "type": "Number",
-      "id": true,
+      "id": false,
       "required": true,
       "length": null,
       "precision": 10,
@@ -94,7 +94,7 @@
     },
     "fornecedorId": {
       "type": "Number",
-      "id": true,
+      "id": false,
       "required": true,
       "length": null,
       "precision": 10,

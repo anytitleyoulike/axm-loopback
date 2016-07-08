@@ -47,6 +47,12 @@ angular.module('axm-loopback', ['ui.router','lbServices'])
 			controller : "CompraAdicionaController"
 		})
 
+		.state('editaCompra', {
+			url : "/edita-compra/:id",
+			templateUrl : "views/compra/editaCompra.html",
+			controller : "CompraEditaController"
+		})
+
 		.state('listaCompra', {
 			url : "/lista-compra",
 			templateUrl : "views/compra/listaCompra.html",

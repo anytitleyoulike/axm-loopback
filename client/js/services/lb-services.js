@@ -491,6 +491,124 @@ module.factory(
           url: urlBase + "/Compras/change-stream",
           method: "POST"
         },
+
+        // INTERNAL. Use Fornecedor.compras.findById() instead.
+        "::findById::Fornecedor::compras": {
+          params: {
+          'fk': '@fk'
+          },
+          url: urlBase + "/Fornecedors/:id/compras/:fk",
+          method: "GET"
+        },
+
+        // INTERNAL. Use Fornecedor.compras.destroyById() instead.
+        "::destroyById::Fornecedor::compras": {
+          params: {
+          'fk': '@fk'
+          },
+          url: urlBase + "/Fornecedors/:id/compras/:fk",
+          method: "DELETE"
+        },
+
+        // INTERNAL. Use Fornecedor.compras.updateById() instead.
+        "::updateById::Fornecedor::compras": {
+          params: {
+          'fk': '@fk'
+          },
+          url: urlBase + "/Fornecedors/:id/compras/:fk",
+          method: "PUT"
+        },
+
+        // INTERNAL. Use Fornecedor.compras() instead.
+        "::get::Fornecedor::compras": {
+          isArray: true,
+          url: urlBase + "/Fornecedors/:id/compras",
+          method: "GET"
+        },
+
+        // INTERNAL. Use Fornecedor.compras.create() instead.
+        "::create::Fornecedor::compras": {
+          url: urlBase + "/Fornecedors/:id/compras",
+          method: "POST"
+        },
+
+        // INTERNAL. Use Fornecedor.compras.createMany() instead.
+        "::createMany::Fornecedor::compras": {
+          isArray: true,
+          url: urlBase + "/Fornecedors/:id/compras",
+          method: "POST"
+        },
+
+        // INTERNAL. Use Fornecedor.compras.destroyAll() instead.
+        "::delete::Fornecedor::compras": {
+          url: urlBase + "/Fornecedors/:id/compras",
+          method: "DELETE"
+        },
+
+        // INTERNAL. Use Fornecedor.compras.count() instead.
+        "::count::Fornecedor::compras": {
+          url: urlBase + "/Fornecedors/:id/compras/count",
+          method: "GET"
+        },
+
+        // INTERNAL. Use Produto.compra.findById() instead.
+        "::findById::Produto::compra": {
+          params: {
+          'fk': '@fk'
+          },
+          url: urlBase + "/Produtos/:id/compra/:fk",
+          method: "GET"
+        },
+
+        // INTERNAL. Use Produto.compra.destroyById() instead.
+        "::destroyById::Produto::compra": {
+          params: {
+          'fk': '@fk'
+          },
+          url: urlBase + "/Produtos/:id/compra/:fk",
+          method: "DELETE"
+        },
+
+        // INTERNAL. Use Produto.compra.updateById() instead.
+        "::updateById::Produto::compra": {
+          params: {
+          'fk': '@fk'
+          },
+          url: urlBase + "/Produtos/:id/compra/:fk",
+          method: "PUT"
+        },
+
+        // INTERNAL. Use Produto.compra() instead.
+        "::get::Produto::compra": {
+          isArray: true,
+          url: urlBase + "/Produtos/:id/compra",
+          method: "GET"
+        },
+
+        // INTERNAL. Use Produto.compra.create() instead.
+        "::create::Produto::compra": {
+          url: urlBase + "/Produtos/:id/compra",
+          method: "POST"
+        },
+
+        // INTERNAL. Use Produto.compra.createMany() instead.
+        "::createMany::Produto::compra": {
+          isArray: true,
+          url: urlBase + "/Produtos/:id/compra",
+          method: "POST"
+        },
+
+        // INTERNAL. Use Produto.compra.destroyAll() instead.
+        "::delete::Produto::compra": {
+          url: urlBase + "/Produtos/:id/compra",
+          method: "DELETE"
+        },
+
+        // INTERNAL. Use Produto.compra.count() instead.
+        "::count::Produto::compra": {
+          url: urlBase + "/Produtos/:id/compra/count",
+          method: "GET"
+        },
       }
     );
 
@@ -733,6 +851,58 @@ module.factory(
       urlBase + "/Fornecedors/:id",
       { 'id': '@id' },
       {
+
+        // INTERNAL. Use Fornecedor.compras.findById() instead.
+        "prototype$__findById__compras": {
+          params: {
+          'fk': '@fk'
+          },
+          url: urlBase + "/Fornecedors/:id/compras/:fk",
+          method: "GET"
+        },
+
+        // INTERNAL. Use Fornecedor.compras.destroyById() instead.
+        "prototype$__destroyById__compras": {
+          params: {
+          'fk': '@fk'
+          },
+          url: urlBase + "/Fornecedors/:id/compras/:fk",
+          method: "DELETE"
+        },
+
+        // INTERNAL. Use Fornecedor.compras.updateById() instead.
+        "prototype$__updateById__compras": {
+          params: {
+          'fk': '@fk'
+          },
+          url: urlBase + "/Fornecedors/:id/compras/:fk",
+          method: "PUT"
+        },
+
+        // INTERNAL. Use Fornecedor.compras() instead.
+        "prototype$__get__compras": {
+          isArray: true,
+          url: urlBase + "/Fornecedors/:id/compras",
+          method: "GET"
+        },
+
+        // INTERNAL. Use Fornecedor.compras.create() instead.
+        "prototype$__create__compras": {
+          url: urlBase + "/Fornecedors/:id/compras",
+          method: "POST"
+        },
+
+        // INTERNAL. Use Fornecedor.compras.destroyAll() instead.
+        "prototype$__delete__compras": {
+          url: urlBase + "/Fornecedors/:id/compras",
+          method: "DELETE"
+        },
+
+        // INTERNAL. Use Fornecedor.compras.count() instead.
+        "prototype$__count__compras": {
+          url: urlBase + "/Fornecedors/:id/compras/count",
+          method: "GET"
+        },
 
         /**
          * @ngdoc method
@@ -1303,6 +1473,307 @@ module.factory(
     */
     R.modelName = "Fornecedor";
 
+    /**
+     * @ngdoc object
+     * @name lbServices.Fornecedor.compras
+     * @header lbServices.Fornecedor.compras
+     * @object
+     * @description
+     *
+     * The object `Fornecedor.compras` groups methods
+     * manipulating `Compra` instances related to `Fornecedor`.
+     *
+     * Call {@link lbServices.Fornecedor#compras Fornecedor.compras()}
+     * to query all related instances.
+     */
+
+
+        /**
+         * @ngdoc method
+         * @name lbServices.Fornecedor#compras
+         * @methodOf lbServices.Fornecedor
+         *
+         * @description
+         *
+         * Queries compras of Fornecedor.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `id` – `{*}` - PersistedModel id
+         *
+         *  - `filter` – `{object=}` - 
+         *
+         * @param {function(Array.<Object>,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Array.<Object>} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * <em>
+         * (The remote method definition does not provide any description.
+         * This usually means the response is a `Compra` object.)
+         * </em>
+         */
+        R.compras = function() {
+          var TargetResource = $injector.get("Compra");
+          var action = TargetResource["::get::Fornecedor::compras"];
+          return action.apply(R, arguments);
+        };
+
+        /**
+         * @ngdoc method
+         * @name lbServices.Fornecedor.compras#count
+         * @methodOf lbServices.Fornecedor.compras
+         *
+         * @description
+         *
+         * Counts compras of Fornecedor.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `id` – `{*}` - PersistedModel id
+         *
+         *  - `where` – `{object=}` - Criteria to match model instances
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * Data properties:
+         *
+         *  - `count` – `{number=}` - 
+         */
+        R.compras.count = function() {
+          var TargetResource = $injector.get("Compra");
+          var action = TargetResource["::count::Fornecedor::compras"];
+          return action.apply(R, arguments);
+        };
+
+        /**
+         * @ngdoc method
+         * @name lbServices.Fornecedor.compras#create
+         * @methodOf lbServices.Fornecedor.compras
+         *
+         * @description
+         *
+         * Creates a new instance in compras of this model.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `id` – `{*}` - PersistedModel id
+         *
+         * @param {Object} postData Request data.
+         *
+         * This method expects a subset of model properties as request parameters.
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * <em>
+         * (The remote method definition does not provide any description.
+         * This usually means the response is a `Compra` object.)
+         * </em>
+         */
+        R.compras.create = function() {
+          var TargetResource = $injector.get("Compra");
+          var action = TargetResource["::create::Fornecedor::compras"];
+          return action.apply(R, arguments);
+        };
+
+        /**
+         * @ngdoc method
+         * @name lbServices.Fornecedor.compras#createMany
+         * @methodOf lbServices.Fornecedor.compras
+         *
+         * @description
+         *
+         * Creates a new instance in compras of this model.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `id` – `{*}` - PersistedModel id
+         *
+         * @param {Object} postData Request data.
+         *
+         * This method expects a subset of model properties as request parameters.
+         *
+         * @param {function(Array.<Object>,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Array.<Object>} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * <em>
+         * (The remote method definition does not provide any description.
+         * This usually means the response is a `Compra` object.)
+         * </em>
+         */
+        R.compras.createMany = function() {
+          var TargetResource = $injector.get("Compra");
+          var action = TargetResource["::createMany::Fornecedor::compras"];
+          return action.apply(R, arguments);
+        };
+
+        /**
+         * @ngdoc method
+         * @name lbServices.Fornecedor.compras#destroyAll
+         * @methodOf lbServices.Fornecedor.compras
+         *
+         * @description
+         *
+         * Deletes all compras of this model.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `id` – `{*}` - PersistedModel id
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * This method returns no data.
+         */
+        R.compras.destroyAll = function() {
+          var TargetResource = $injector.get("Compra");
+          var action = TargetResource["::delete::Fornecedor::compras"];
+          return action.apply(R, arguments);
+        };
+
+        /**
+         * @ngdoc method
+         * @name lbServices.Fornecedor.compras#destroyById
+         * @methodOf lbServices.Fornecedor.compras
+         *
+         * @description
+         *
+         * Delete a related item by id for compras.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `id` – `{*}` - PersistedModel id
+         *
+         *  - `fk` – `{*}` - Foreign key for compras
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * This method returns no data.
+         */
+        R.compras.destroyById = function() {
+          var TargetResource = $injector.get("Compra");
+          var action = TargetResource["::destroyById::Fornecedor::compras"];
+          return action.apply(R, arguments);
+        };
+
+        /**
+         * @ngdoc method
+         * @name lbServices.Fornecedor.compras#findById
+         * @methodOf lbServices.Fornecedor.compras
+         *
+         * @description
+         *
+         * Find a related item by id for compras.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `id` – `{*}` - PersistedModel id
+         *
+         *  - `fk` – `{*}` - Foreign key for compras
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * <em>
+         * (The remote method definition does not provide any description.
+         * This usually means the response is a `Compra` object.)
+         * </em>
+         */
+        R.compras.findById = function() {
+          var TargetResource = $injector.get("Compra");
+          var action = TargetResource["::findById::Fornecedor::compras"];
+          return action.apply(R, arguments);
+        };
+
+        /**
+         * @ngdoc method
+         * @name lbServices.Fornecedor.compras#updateById
+         * @methodOf lbServices.Fornecedor.compras
+         *
+         * @description
+         *
+         * Update a related item by id for compras.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `id` – `{*}` - PersistedModel id
+         *
+         *  - `fk` – `{*}` - Foreign key for compras
+         *
+         * @param {Object} postData Request data.
+         *
+         * This method expects a subset of model properties as request parameters.
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * <em>
+         * (The remote method definition does not provide any description.
+         * This usually means the response is a `Compra` object.)
+         * </em>
+         */
+        R.compras.updateById = function() {
+          var TargetResource = $injector.get("Compra");
+          var action = TargetResource["::updateById::Fornecedor::compras"];
+          return action.apply(R, arguments);
+        };
 
     return R;
   }]);
@@ -1331,6 +1802,110 @@ module.factory(
       urlBase + "/Produtos/:id",
       { 'id': '@id' },
       {
+
+        // INTERNAL. Use Produto.compra.findById() instead.
+        "prototype$__findById__compra": {
+          params: {
+          'fk': '@fk'
+          },
+          url: urlBase + "/Produtos/:id/compra/:fk",
+          method: "GET"
+        },
+
+        // INTERNAL. Use Produto.compra.destroyById() instead.
+        "prototype$__destroyById__compra": {
+          params: {
+          'fk': '@fk'
+          },
+          url: urlBase + "/Produtos/:id/compra/:fk",
+          method: "DELETE"
+        },
+
+        // INTERNAL. Use Produto.compra.updateById() instead.
+        "prototype$__updateById__compra": {
+          params: {
+          'fk': '@fk'
+          },
+          url: urlBase + "/Produtos/:id/compra/:fk",
+          method: "PUT"
+        },
+
+        // INTERNAL. Use Produto.produtoSolicitacaoBaixaEstoques.findById() instead.
+        "prototype$__findById__produtoSolicitacaoBaixaEstoques": {
+          params: {
+          'fk': '@fk'
+          },
+          url: urlBase + "/Produtos/:id/produtoSolicitacaoBaixaEstoques/:fk",
+          method: "GET"
+        },
+
+        // INTERNAL. Use Produto.produtoSolicitacaoBaixaEstoques.destroyById() instead.
+        "prototype$__destroyById__produtoSolicitacaoBaixaEstoques": {
+          params: {
+          'fk': '@fk'
+          },
+          url: urlBase + "/Produtos/:id/produtoSolicitacaoBaixaEstoques/:fk",
+          method: "DELETE"
+        },
+
+        // INTERNAL. Use Produto.produtoSolicitacaoBaixaEstoques.updateById() instead.
+        "prototype$__updateById__produtoSolicitacaoBaixaEstoques": {
+          params: {
+          'fk': '@fk'
+          },
+          url: urlBase + "/Produtos/:id/produtoSolicitacaoBaixaEstoques/:fk",
+          method: "PUT"
+        },
+
+        // INTERNAL. Use Produto.compra() instead.
+        "prototype$__get__compra": {
+          isArray: true,
+          url: urlBase + "/Produtos/:id/compra",
+          method: "GET"
+        },
+
+        // INTERNAL. Use Produto.compra.create() instead.
+        "prototype$__create__compra": {
+          url: urlBase + "/Produtos/:id/compra",
+          method: "POST"
+        },
+
+        // INTERNAL. Use Produto.compra.destroyAll() instead.
+        "prototype$__delete__compra": {
+          url: urlBase + "/Produtos/:id/compra",
+          method: "DELETE"
+        },
+
+        // INTERNAL. Use Produto.compra.count() instead.
+        "prototype$__count__compra": {
+          url: urlBase + "/Produtos/:id/compra/count",
+          method: "GET"
+        },
+
+        // INTERNAL. Use Produto.produtoSolicitacaoBaixaEstoques() instead.
+        "prototype$__get__produtoSolicitacaoBaixaEstoques": {
+          isArray: true,
+          url: urlBase + "/Produtos/:id/produtoSolicitacaoBaixaEstoques",
+          method: "GET"
+        },
+
+        // INTERNAL. Use Produto.produtoSolicitacaoBaixaEstoques.create() instead.
+        "prototype$__create__produtoSolicitacaoBaixaEstoques": {
+          url: urlBase + "/Produtos/:id/produtoSolicitacaoBaixaEstoques",
+          method: "POST"
+        },
+
+        // INTERNAL. Use Produto.produtoSolicitacaoBaixaEstoques.destroyAll() instead.
+        "prototype$__delete__produtoSolicitacaoBaixaEstoques": {
+          url: urlBase + "/Produtos/:id/produtoSolicitacaoBaixaEstoques",
+          method: "DELETE"
+        },
+
+        // INTERNAL. Use Produto.produtoSolicitacaoBaixaEstoques.count() instead.
+        "prototype$__count__produtoSolicitacaoBaixaEstoques": {
+          url: urlBase + "/Produtos/:id/produtoSolicitacaoBaixaEstoques/count",
+          method: "GET"
+        },
 
         /**
          * @ngdoc method
@@ -1759,6 +2334,12 @@ module.factory(
           url: urlBase + "/Compras/:id/produto",
           method: "GET"
         },
+
+        // INTERNAL. Use ProdutoSolicitacaoBaixaEstoque.produto() instead.
+        "::get::ProdutoSolicitacaoBaixaEstoque::produto": {
+          url: urlBase + "/ProdutoSolicitacaoBaixaEstoques/:id/produto",
+          method: "GET"
+        },
       }
     );
 
@@ -1901,6 +2482,608 @@ module.factory(
     */
     R.modelName = "Produto";
 
+    /**
+     * @ngdoc object
+     * @name lbServices.Produto.compra
+     * @header lbServices.Produto.compra
+     * @object
+     * @description
+     *
+     * The object `Produto.compra` groups methods
+     * manipulating `Compra` instances related to `Produto`.
+     *
+     * Call {@link lbServices.Produto#compra Produto.compra()}
+     * to query all related instances.
+     */
+
+
+        /**
+         * @ngdoc method
+         * @name lbServices.Produto#compra
+         * @methodOf lbServices.Produto
+         *
+         * @description
+         *
+         * Queries compra of Produto.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `id` – `{*}` - PersistedModel id
+         *
+         *  - `filter` – `{object=}` - 
+         *
+         * @param {function(Array.<Object>,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Array.<Object>} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * <em>
+         * (The remote method definition does not provide any description.
+         * This usually means the response is a `Compra` object.)
+         * </em>
+         */
+        R.compra = function() {
+          var TargetResource = $injector.get("Compra");
+          var action = TargetResource["::get::Produto::compra"];
+          return action.apply(R, arguments);
+        };
+
+        /**
+         * @ngdoc method
+         * @name lbServices.Produto.compra#count
+         * @methodOf lbServices.Produto.compra
+         *
+         * @description
+         *
+         * Counts compra of Produto.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `id` – `{*}` - PersistedModel id
+         *
+         *  - `where` – `{object=}` - Criteria to match model instances
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * Data properties:
+         *
+         *  - `count` – `{number=}` - 
+         */
+        R.compra.count = function() {
+          var TargetResource = $injector.get("Compra");
+          var action = TargetResource["::count::Produto::compra"];
+          return action.apply(R, arguments);
+        };
+
+        /**
+         * @ngdoc method
+         * @name lbServices.Produto.compra#create
+         * @methodOf lbServices.Produto.compra
+         *
+         * @description
+         *
+         * Creates a new instance in compra of this model.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `id` – `{*}` - PersistedModel id
+         *
+         * @param {Object} postData Request data.
+         *
+         * This method expects a subset of model properties as request parameters.
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * <em>
+         * (The remote method definition does not provide any description.
+         * This usually means the response is a `Compra` object.)
+         * </em>
+         */
+        R.compra.create = function() {
+          var TargetResource = $injector.get("Compra");
+          var action = TargetResource["::create::Produto::compra"];
+          return action.apply(R, arguments);
+        };
+
+        /**
+         * @ngdoc method
+         * @name lbServices.Produto.compra#createMany
+         * @methodOf lbServices.Produto.compra
+         *
+         * @description
+         *
+         * Creates a new instance in compra of this model.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `id` – `{*}` - PersistedModel id
+         *
+         * @param {Object} postData Request data.
+         *
+         * This method expects a subset of model properties as request parameters.
+         *
+         * @param {function(Array.<Object>,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Array.<Object>} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * <em>
+         * (The remote method definition does not provide any description.
+         * This usually means the response is a `Compra` object.)
+         * </em>
+         */
+        R.compra.createMany = function() {
+          var TargetResource = $injector.get("Compra");
+          var action = TargetResource["::createMany::Produto::compra"];
+          return action.apply(R, arguments);
+        };
+
+        /**
+         * @ngdoc method
+         * @name lbServices.Produto.compra#destroyAll
+         * @methodOf lbServices.Produto.compra
+         *
+         * @description
+         *
+         * Deletes all compra of this model.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `id` – `{*}` - PersistedModel id
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * This method returns no data.
+         */
+        R.compra.destroyAll = function() {
+          var TargetResource = $injector.get("Compra");
+          var action = TargetResource["::delete::Produto::compra"];
+          return action.apply(R, arguments);
+        };
+
+        /**
+         * @ngdoc method
+         * @name lbServices.Produto.compra#destroyById
+         * @methodOf lbServices.Produto.compra
+         *
+         * @description
+         *
+         * Delete a related item by id for compra.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `id` – `{*}` - PersistedModel id
+         *
+         *  - `fk` – `{*}` - Foreign key for compra
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * This method returns no data.
+         */
+        R.compra.destroyById = function() {
+          var TargetResource = $injector.get("Compra");
+          var action = TargetResource["::destroyById::Produto::compra"];
+          return action.apply(R, arguments);
+        };
+
+        /**
+         * @ngdoc method
+         * @name lbServices.Produto.compra#findById
+         * @methodOf lbServices.Produto.compra
+         *
+         * @description
+         *
+         * Find a related item by id for compra.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `id` – `{*}` - PersistedModel id
+         *
+         *  - `fk` – `{*}` - Foreign key for compra
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * <em>
+         * (The remote method definition does not provide any description.
+         * This usually means the response is a `Compra` object.)
+         * </em>
+         */
+        R.compra.findById = function() {
+          var TargetResource = $injector.get("Compra");
+          var action = TargetResource["::findById::Produto::compra"];
+          return action.apply(R, arguments);
+        };
+
+        /**
+         * @ngdoc method
+         * @name lbServices.Produto.compra#updateById
+         * @methodOf lbServices.Produto.compra
+         *
+         * @description
+         *
+         * Update a related item by id for compra.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `id` – `{*}` - PersistedModel id
+         *
+         *  - `fk` – `{*}` - Foreign key for compra
+         *
+         * @param {Object} postData Request data.
+         *
+         * This method expects a subset of model properties as request parameters.
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * <em>
+         * (The remote method definition does not provide any description.
+         * This usually means the response is a `Compra` object.)
+         * </em>
+         */
+        R.compra.updateById = function() {
+          var TargetResource = $injector.get("Compra");
+          var action = TargetResource["::updateById::Produto::compra"];
+          return action.apply(R, arguments);
+        };
+    /**
+     * @ngdoc object
+     * @name lbServices.Produto.produtoSolicitacaoBaixaEstoques
+     * @header lbServices.Produto.produtoSolicitacaoBaixaEstoques
+     * @object
+     * @description
+     *
+     * The object `Produto.produtoSolicitacaoBaixaEstoques` groups methods
+     * manipulating `ProdutoSolicitacaoBaixaEstoque` instances related to `Produto`.
+     *
+     * Call {@link lbServices.Produto#produtoSolicitacaoBaixaEstoques Produto.produtoSolicitacaoBaixaEstoques()}
+     * to query all related instances.
+     */
+
+
+        /**
+         * @ngdoc method
+         * @name lbServices.Produto#produtoSolicitacaoBaixaEstoques
+         * @methodOf lbServices.Produto
+         *
+         * @description
+         *
+         * Queries produtoSolicitacaoBaixaEstoques of Produto.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `id` – `{*}` - PersistedModel id
+         *
+         *  - `filter` – `{object=}` - 
+         *
+         * @param {function(Array.<Object>,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Array.<Object>} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * <em>
+         * (The remote method definition does not provide any description.
+         * This usually means the response is a `ProdutoSolicitacaoBaixaEstoque` object.)
+         * </em>
+         */
+        R.produtoSolicitacaoBaixaEstoques = function() {
+          var TargetResource = $injector.get("ProdutoSolicitacaoBaixaEstoque");
+          var action = TargetResource["::get::Produto::produtoSolicitacaoBaixaEstoques"];
+          return action.apply(R, arguments);
+        };
+
+        /**
+         * @ngdoc method
+         * @name lbServices.Produto.produtoSolicitacaoBaixaEstoques#count
+         * @methodOf lbServices.Produto.produtoSolicitacaoBaixaEstoques
+         *
+         * @description
+         *
+         * Counts produtoSolicitacaoBaixaEstoques of Produto.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `id` – `{*}` - PersistedModel id
+         *
+         *  - `where` – `{object=}` - Criteria to match model instances
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * Data properties:
+         *
+         *  - `count` – `{number=}` - 
+         */
+        R.produtoSolicitacaoBaixaEstoques.count = function() {
+          var TargetResource = $injector.get("ProdutoSolicitacaoBaixaEstoque");
+          var action = TargetResource["::count::Produto::produtoSolicitacaoBaixaEstoques"];
+          return action.apply(R, arguments);
+        };
+
+        /**
+         * @ngdoc method
+         * @name lbServices.Produto.produtoSolicitacaoBaixaEstoques#create
+         * @methodOf lbServices.Produto.produtoSolicitacaoBaixaEstoques
+         *
+         * @description
+         *
+         * Creates a new instance in produtoSolicitacaoBaixaEstoques of this model.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `id` – `{*}` - PersistedModel id
+         *
+         * @param {Object} postData Request data.
+         *
+         * This method expects a subset of model properties as request parameters.
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * <em>
+         * (The remote method definition does not provide any description.
+         * This usually means the response is a `ProdutoSolicitacaoBaixaEstoque` object.)
+         * </em>
+         */
+        R.produtoSolicitacaoBaixaEstoques.create = function() {
+          var TargetResource = $injector.get("ProdutoSolicitacaoBaixaEstoque");
+          var action = TargetResource["::create::Produto::produtoSolicitacaoBaixaEstoques"];
+          return action.apply(R, arguments);
+        };
+
+        /**
+         * @ngdoc method
+         * @name lbServices.Produto.produtoSolicitacaoBaixaEstoques#createMany
+         * @methodOf lbServices.Produto.produtoSolicitacaoBaixaEstoques
+         *
+         * @description
+         *
+         * Creates a new instance in produtoSolicitacaoBaixaEstoques of this model.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `id` – `{*}` - PersistedModel id
+         *
+         * @param {Object} postData Request data.
+         *
+         * This method expects a subset of model properties as request parameters.
+         *
+         * @param {function(Array.<Object>,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Array.<Object>} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * <em>
+         * (The remote method definition does not provide any description.
+         * This usually means the response is a `ProdutoSolicitacaoBaixaEstoque` object.)
+         * </em>
+         */
+        R.produtoSolicitacaoBaixaEstoques.createMany = function() {
+          var TargetResource = $injector.get("ProdutoSolicitacaoBaixaEstoque");
+          var action = TargetResource["::createMany::Produto::produtoSolicitacaoBaixaEstoques"];
+          return action.apply(R, arguments);
+        };
+
+        /**
+         * @ngdoc method
+         * @name lbServices.Produto.produtoSolicitacaoBaixaEstoques#destroyAll
+         * @methodOf lbServices.Produto.produtoSolicitacaoBaixaEstoques
+         *
+         * @description
+         *
+         * Deletes all produtoSolicitacaoBaixaEstoques of this model.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `id` – `{*}` - PersistedModel id
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * This method returns no data.
+         */
+        R.produtoSolicitacaoBaixaEstoques.destroyAll = function() {
+          var TargetResource = $injector.get("ProdutoSolicitacaoBaixaEstoque");
+          var action = TargetResource["::delete::Produto::produtoSolicitacaoBaixaEstoques"];
+          return action.apply(R, arguments);
+        };
+
+        /**
+         * @ngdoc method
+         * @name lbServices.Produto.produtoSolicitacaoBaixaEstoques#destroyById
+         * @methodOf lbServices.Produto.produtoSolicitacaoBaixaEstoques
+         *
+         * @description
+         *
+         * Delete a related item by id for produtoSolicitacaoBaixaEstoques.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `id` – `{*}` - PersistedModel id
+         *
+         *  - `fk` – `{*}` - Foreign key for produtoSolicitacaoBaixaEstoques
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * This method returns no data.
+         */
+        R.produtoSolicitacaoBaixaEstoques.destroyById = function() {
+          var TargetResource = $injector.get("ProdutoSolicitacaoBaixaEstoque");
+          var action = TargetResource["::destroyById::Produto::produtoSolicitacaoBaixaEstoques"];
+          return action.apply(R, arguments);
+        };
+
+        /**
+         * @ngdoc method
+         * @name lbServices.Produto.produtoSolicitacaoBaixaEstoques#findById
+         * @methodOf lbServices.Produto.produtoSolicitacaoBaixaEstoques
+         *
+         * @description
+         *
+         * Find a related item by id for produtoSolicitacaoBaixaEstoques.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `id` – `{*}` - PersistedModel id
+         *
+         *  - `fk` – `{*}` - Foreign key for produtoSolicitacaoBaixaEstoques
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * <em>
+         * (The remote method definition does not provide any description.
+         * This usually means the response is a `ProdutoSolicitacaoBaixaEstoque` object.)
+         * </em>
+         */
+        R.produtoSolicitacaoBaixaEstoques.findById = function() {
+          var TargetResource = $injector.get("ProdutoSolicitacaoBaixaEstoque");
+          var action = TargetResource["::findById::Produto::produtoSolicitacaoBaixaEstoques"];
+          return action.apply(R, arguments);
+        };
+
+        /**
+         * @ngdoc method
+         * @name lbServices.Produto.produtoSolicitacaoBaixaEstoques#updateById
+         * @methodOf lbServices.Produto.produtoSolicitacaoBaixaEstoques
+         *
+         * @description
+         *
+         * Update a related item by id for produtoSolicitacaoBaixaEstoques.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `id` – `{*}` - PersistedModel id
+         *
+         *  - `fk` – `{*}` - Foreign key for produtoSolicitacaoBaixaEstoques
+         *
+         * @param {Object} postData Request data.
+         *
+         * This method expects a subset of model properties as request parameters.
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * <em>
+         * (The remote method definition does not provide any description.
+         * This usually means the response is a `ProdutoSolicitacaoBaixaEstoque` object.)
+         * </em>
+         */
+        R.produtoSolicitacaoBaixaEstoques.updateById = function() {
+          var TargetResource = $injector.get("ProdutoSolicitacaoBaixaEstoque");
+          var action = TargetResource["::updateById::Produto::produtoSolicitacaoBaixaEstoques"];
+          return action.apply(R, arguments);
+        };
 
     return R;
   }]);
@@ -2522,6 +3705,18 @@ module.factory(
       { 'id': '@id' },
       {
 
+        // INTERNAL. Use ProdutoSolicitacaoBaixaEstoque.produto() instead.
+        "prototype$__get__produto": {
+          url: urlBase + "/ProdutoSolicitacaoBaixaEstoques/:id/produto",
+          method: "GET"
+        },
+
+        // INTERNAL. Use ProdutoSolicitacaoBaixaEstoque.usuario() instead.
+        "prototype$__get__usuario": {
+          url: urlBase + "/ProdutoSolicitacaoBaixaEstoques/:id/usuario",
+          method: "GET"
+        },
+
         /**
          * @ngdoc method
          * @name lbServices.ProdutoSolicitacaoBaixaEstoque#create
@@ -2943,6 +4138,124 @@ module.factory(
           url: urlBase + "/ProdutoSolicitacaoBaixaEstoques/change-stream",
           method: "POST"
         },
+
+        // INTERNAL. Use Produto.produtoSolicitacaoBaixaEstoques.findById() instead.
+        "::findById::Produto::produtoSolicitacaoBaixaEstoques": {
+          params: {
+          'fk': '@fk'
+          },
+          url: urlBase + "/Produtos/:id/produtoSolicitacaoBaixaEstoques/:fk",
+          method: "GET"
+        },
+
+        // INTERNAL. Use Produto.produtoSolicitacaoBaixaEstoques.destroyById() instead.
+        "::destroyById::Produto::produtoSolicitacaoBaixaEstoques": {
+          params: {
+          'fk': '@fk'
+          },
+          url: urlBase + "/Produtos/:id/produtoSolicitacaoBaixaEstoques/:fk",
+          method: "DELETE"
+        },
+
+        // INTERNAL. Use Produto.produtoSolicitacaoBaixaEstoques.updateById() instead.
+        "::updateById::Produto::produtoSolicitacaoBaixaEstoques": {
+          params: {
+          'fk': '@fk'
+          },
+          url: urlBase + "/Produtos/:id/produtoSolicitacaoBaixaEstoques/:fk",
+          method: "PUT"
+        },
+
+        // INTERNAL. Use Produto.produtoSolicitacaoBaixaEstoques() instead.
+        "::get::Produto::produtoSolicitacaoBaixaEstoques": {
+          isArray: true,
+          url: urlBase + "/Produtos/:id/produtoSolicitacaoBaixaEstoques",
+          method: "GET"
+        },
+
+        // INTERNAL. Use Produto.produtoSolicitacaoBaixaEstoques.create() instead.
+        "::create::Produto::produtoSolicitacaoBaixaEstoques": {
+          url: urlBase + "/Produtos/:id/produtoSolicitacaoBaixaEstoques",
+          method: "POST"
+        },
+
+        // INTERNAL. Use Produto.produtoSolicitacaoBaixaEstoques.createMany() instead.
+        "::createMany::Produto::produtoSolicitacaoBaixaEstoques": {
+          isArray: true,
+          url: urlBase + "/Produtos/:id/produtoSolicitacaoBaixaEstoques",
+          method: "POST"
+        },
+
+        // INTERNAL. Use Produto.produtoSolicitacaoBaixaEstoques.destroyAll() instead.
+        "::delete::Produto::produtoSolicitacaoBaixaEstoques": {
+          url: urlBase + "/Produtos/:id/produtoSolicitacaoBaixaEstoques",
+          method: "DELETE"
+        },
+
+        // INTERNAL. Use Produto.produtoSolicitacaoBaixaEstoques.count() instead.
+        "::count::Produto::produtoSolicitacaoBaixaEstoques": {
+          url: urlBase + "/Produtos/:id/produtoSolicitacaoBaixaEstoques/count",
+          method: "GET"
+        },
+
+        // INTERNAL. Use Usuario.produtoSolicitacaoBaixaEstoques.findById() instead.
+        "::findById::Usuario::produtoSolicitacaoBaixaEstoques": {
+          params: {
+          'fk': '@fk'
+          },
+          url: urlBase + "/Usuarios/:id/produtoSolicitacaoBaixaEstoques/:fk",
+          method: "GET"
+        },
+
+        // INTERNAL. Use Usuario.produtoSolicitacaoBaixaEstoques.destroyById() instead.
+        "::destroyById::Usuario::produtoSolicitacaoBaixaEstoques": {
+          params: {
+          'fk': '@fk'
+          },
+          url: urlBase + "/Usuarios/:id/produtoSolicitacaoBaixaEstoques/:fk",
+          method: "DELETE"
+        },
+
+        // INTERNAL. Use Usuario.produtoSolicitacaoBaixaEstoques.updateById() instead.
+        "::updateById::Usuario::produtoSolicitacaoBaixaEstoques": {
+          params: {
+          'fk': '@fk'
+          },
+          url: urlBase + "/Usuarios/:id/produtoSolicitacaoBaixaEstoques/:fk",
+          method: "PUT"
+        },
+
+        // INTERNAL. Use Usuario.produtoSolicitacaoBaixaEstoques() instead.
+        "::get::Usuario::produtoSolicitacaoBaixaEstoques": {
+          isArray: true,
+          url: urlBase + "/Usuarios/:id/produtoSolicitacaoBaixaEstoques",
+          method: "GET"
+        },
+
+        // INTERNAL. Use Usuario.produtoSolicitacaoBaixaEstoques.create() instead.
+        "::create::Usuario::produtoSolicitacaoBaixaEstoques": {
+          url: urlBase + "/Usuarios/:id/produtoSolicitacaoBaixaEstoques",
+          method: "POST"
+        },
+
+        // INTERNAL. Use Usuario.produtoSolicitacaoBaixaEstoques.createMany() instead.
+        "::createMany::Usuario::produtoSolicitacaoBaixaEstoques": {
+          isArray: true,
+          url: urlBase + "/Usuarios/:id/produtoSolicitacaoBaixaEstoques",
+          method: "POST"
+        },
+
+        // INTERNAL. Use Usuario.produtoSolicitacaoBaixaEstoques.destroyAll() instead.
+        "::delete::Usuario::produtoSolicitacaoBaixaEstoques": {
+          url: urlBase + "/Usuarios/:id/produtoSolicitacaoBaixaEstoques",
+          method: "DELETE"
+        },
+
+        // INTERNAL. Use Usuario.produtoSolicitacaoBaixaEstoques.count() instead.
+        "::count::Usuario::produtoSolicitacaoBaixaEstoques": {
+          url: urlBase + "/Usuarios/:id/produtoSolicitacaoBaixaEstoques/count",
+          method: "GET"
+        },
       }
     );
 
@@ -3086,6 +4399,78 @@ module.factory(
     R.modelName = "ProdutoSolicitacaoBaixaEstoque";
 
 
+        /**
+         * @ngdoc method
+         * @name lbServices.ProdutoSolicitacaoBaixaEstoque#produto
+         * @methodOf lbServices.ProdutoSolicitacaoBaixaEstoque
+         *
+         * @description
+         *
+         * Fetches belongsTo relation produto.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `id` – `{*}` - PersistedModel id
+         *
+         *  - `refresh` – `{boolean=}` - 
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * <em>
+         * (The remote method definition does not provide any description.
+         * This usually means the response is a `Produto` object.)
+         * </em>
+         */
+        R.produto = function() {
+          var TargetResource = $injector.get("Produto");
+          var action = TargetResource["::get::ProdutoSolicitacaoBaixaEstoque::produto"];
+          return action.apply(R, arguments);
+        };
+
+        /**
+         * @ngdoc method
+         * @name lbServices.ProdutoSolicitacaoBaixaEstoque#usuario
+         * @methodOf lbServices.ProdutoSolicitacaoBaixaEstoque
+         *
+         * @description
+         *
+         * Fetches belongsTo relation usuario.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `id` – `{*}` - PersistedModel id
+         *
+         *  - `refresh` – `{boolean=}` - 
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * <em>
+         * (The remote method definition does not provide any description.
+         * This usually means the response is a `Usuario` object.)
+         * </em>
+         */
+        R.usuario = function() {
+          var TargetResource = $injector.get("Usuario");
+          var action = TargetResource["::get::ProdutoSolicitacaoBaixaEstoque::usuario"];
+          return action.apply(R, arguments);
+        };
+
     return R;
   }]);
 
@@ -3113,6 +4498,58 @@ module.factory(
       urlBase + "/Usuarios/:id",
       { 'id': '@id' },
       {
+
+        // INTERNAL. Use Usuario.produtoSolicitacaoBaixaEstoques.findById() instead.
+        "prototype$__findById__produtoSolicitacaoBaixaEstoques": {
+          params: {
+          'fk': '@fk'
+          },
+          url: urlBase + "/Usuarios/:id/produtoSolicitacaoBaixaEstoques/:fk",
+          method: "GET"
+        },
+
+        // INTERNAL. Use Usuario.produtoSolicitacaoBaixaEstoques.destroyById() instead.
+        "prototype$__destroyById__produtoSolicitacaoBaixaEstoques": {
+          params: {
+          'fk': '@fk'
+          },
+          url: urlBase + "/Usuarios/:id/produtoSolicitacaoBaixaEstoques/:fk",
+          method: "DELETE"
+        },
+
+        // INTERNAL. Use Usuario.produtoSolicitacaoBaixaEstoques.updateById() instead.
+        "prototype$__updateById__produtoSolicitacaoBaixaEstoques": {
+          params: {
+          'fk': '@fk'
+          },
+          url: urlBase + "/Usuarios/:id/produtoSolicitacaoBaixaEstoques/:fk",
+          method: "PUT"
+        },
+
+        // INTERNAL. Use Usuario.produtoSolicitacaoBaixaEstoques() instead.
+        "prototype$__get__produtoSolicitacaoBaixaEstoques": {
+          isArray: true,
+          url: urlBase + "/Usuarios/:id/produtoSolicitacaoBaixaEstoques",
+          method: "GET"
+        },
+
+        // INTERNAL. Use Usuario.produtoSolicitacaoBaixaEstoques.create() instead.
+        "prototype$__create__produtoSolicitacaoBaixaEstoques": {
+          url: urlBase + "/Usuarios/:id/produtoSolicitacaoBaixaEstoques",
+          method: "POST"
+        },
+
+        // INTERNAL. Use Usuario.produtoSolicitacaoBaixaEstoques.destroyAll() instead.
+        "prototype$__delete__produtoSolicitacaoBaixaEstoques": {
+          url: urlBase + "/Usuarios/:id/produtoSolicitacaoBaixaEstoques",
+          method: "DELETE"
+        },
+
+        // INTERNAL. Use Usuario.produtoSolicitacaoBaixaEstoques.count() instead.
+        "prototype$__count__produtoSolicitacaoBaixaEstoques": {
+          url: urlBase + "/Usuarios/:id/produtoSolicitacaoBaixaEstoques/count",
+          method: "GET"
+        },
 
         /**
          * @ngdoc method
@@ -3535,6 +4972,12 @@ module.factory(
           url: urlBase + "/Usuarios/change-stream",
           method: "POST"
         },
+
+        // INTERNAL. Use ProdutoSolicitacaoBaixaEstoque.usuario() instead.
+        "::get::ProdutoSolicitacaoBaixaEstoque::usuario": {
+          url: urlBase + "/ProdutoSolicitacaoBaixaEstoques/:id/usuario",
+          method: "GET"
+        },
       }
     );
 
@@ -3677,6 +5120,307 @@ module.factory(
     */
     R.modelName = "Usuario";
 
+    /**
+     * @ngdoc object
+     * @name lbServices.Usuario.produtoSolicitacaoBaixaEstoques
+     * @header lbServices.Usuario.produtoSolicitacaoBaixaEstoques
+     * @object
+     * @description
+     *
+     * The object `Usuario.produtoSolicitacaoBaixaEstoques` groups methods
+     * manipulating `ProdutoSolicitacaoBaixaEstoque` instances related to `Usuario`.
+     *
+     * Call {@link lbServices.Usuario#produtoSolicitacaoBaixaEstoques Usuario.produtoSolicitacaoBaixaEstoques()}
+     * to query all related instances.
+     */
+
+
+        /**
+         * @ngdoc method
+         * @name lbServices.Usuario#produtoSolicitacaoBaixaEstoques
+         * @methodOf lbServices.Usuario
+         *
+         * @description
+         *
+         * Queries produtoSolicitacaoBaixaEstoques of Usuario.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `id` – `{*}` - PersistedModel id
+         *
+         *  - `filter` – `{object=}` - 
+         *
+         * @param {function(Array.<Object>,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Array.<Object>} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * <em>
+         * (The remote method definition does not provide any description.
+         * This usually means the response is a `ProdutoSolicitacaoBaixaEstoque` object.)
+         * </em>
+         */
+        R.produtoSolicitacaoBaixaEstoques = function() {
+          var TargetResource = $injector.get("ProdutoSolicitacaoBaixaEstoque");
+          var action = TargetResource["::get::Usuario::produtoSolicitacaoBaixaEstoques"];
+          return action.apply(R, arguments);
+        };
+
+        /**
+         * @ngdoc method
+         * @name lbServices.Usuario.produtoSolicitacaoBaixaEstoques#count
+         * @methodOf lbServices.Usuario.produtoSolicitacaoBaixaEstoques
+         *
+         * @description
+         *
+         * Counts produtoSolicitacaoBaixaEstoques of Usuario.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `id` – `{*}` - PersistedModel id
+         *
+         *  - `where` – `{object=}` - Criteria to match model instances
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * Data properties:
+         *
+         *  - `count` – `{number=}` - 
+         */
+        R.produtoSolicitacaoBaixaEstoques.count = function() {
+          var TargetResource = $injector.get("ProdutoSolicitacaoBaixaEstoque");
+          var action = TargetResource["::count::Usuario::produtoSolicitacaoBaixaEstoques"];
+          return action.apply(R, arguments);
+        };
+
+        /**
+         * @ngdoc method
+         * @name lbServices.Usuario.produtoSolicitacaoBaixaEstoques#create
+         * @methodOf lbServices.Usuario.produtoSolicitacaoBaixaEstoques
+         *
+         * @description
+         *
+         * Creates a new instance in produtoSolicitacaoBaixaEstoques of this model.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `id` – `{*}` - PersistedModel id
+         *
+         * @param {Object} postData Request data.
+         *
+         * This method expects a subset of model properties as request parameters.
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * <em>
+         * (The remote method definition does not provide any description.
+         * This usually means the response is a `ProdutoSolicitacaoBaixaEstoque` object.)
+         * </em>
+         */
+        R.produtoSolicitacaoBaixaEstoques.create = function() {
+          var TargetResource = $injector.get("ProdutoSolicitacaoBaixaEstoque");
+          var action = TargetResource["::create::Usuario::produtoSolicitacaoBaixaEstoques"];
+          return action.apply(R, arguments);
+        };
+
+        /**
+         * @ngdoc method
+         * @name lbServices.Usuario.produtoSolicitacaoBaixaEstoques#createMany
+         * @methodOf lbServices.Usuario.produtoSolicitacaoBaixaEstoques
+         *
+         * @description
+         *
+         * Creates a new instance in produtoSolicitacaoBaixaEstoques of this model.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `id` – `{*}` - PersistedModel id
+         *
+         * @param {Object} postData Request data.
+         *
+         * This method expects a subset of model properties as request parameters.
+         *
+         * @param {function(Array.<Object>,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Array.<Object>} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * <em>
+         * (The remote method definition does not provide any description.
+         * This usually means the response is a `ProdutoSolicitacaoBaixaEstoque` object.)
+         * </em>
+         */
+        R.produtoSolicitacaoBaixaEstoques.createMany = function() {
+          var TargetResource = $injector.get("ProdutoSolicitacaoBaixaEstoque");
+          var action = TargetResource["::createMany::Usuario::produtoSolicitacaoBaixaEstoques"];
+          return action.apply(R, arguments);
+        };
+
+        /**
+         * @ngdoc method
+         * @name lbServices.Usuario.produtoSolicitacaoBaixaEstoques#destroyAll
+         * @methodOf lbServices.Usuario.produtoSolicitacaoBaixaEstoques
+         *
+         * @description
+         *
+         * Deletes all produtoSolicitacaoBaixaEstoques of this model.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `id` – `{*}` - PersistedModel id
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * This method returns no data.
+         */
+        R.produtoSolicitacaoBaixaEstoques.destroyAll = function() {
+          var TargetResource = $injector.get("ProdutoSolicitacaoBaixaEstoque");
+          var action = TargetResource["::delete::Usuario::produtoSolicitacaoBaixaEstoques"];
+          return action.apply(R, arguments);
+        };
+
+        /**
+         * @ngdoc method
+         * @name lbServices.Usuario.produtoSolicitacaoBaixaEstoques#destroyById
+         * @methodOf lbServices.Usuario.produtoSolicitacaoBaixaEstoques
+         *
+         * @description
+         *
+         * Delete a related item by id for produtoSolicitacaoBaixaEstoques.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `id` – `{*}` - PersistedModel id
+         *
+         *  - `fk` – `{*}` - Foreign key for produtoSolicitacaoBaixaEstoques
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * This method returns no data.
+         */
+        R.produtoSolicitacaoBaixaEstoques.destroyById = function() {
+          var TargetResource = $injector.get("ProdutoSolicitacaoBaixaEstoque");
+          var action = TargetResource["::destroyById::Usuario::produtoSolicitacaoBaixaEstoques"];
+          return action.apply(R, arguments);
+        };
+
+        /**
+         * @ngdoc method
+         * @name lbServices.Usuario.produtoSolicitacaoBaixaEstoques#findById
+         * @methodOf lbServices.Usuario.produtoSolicitacaoBaixaEstoques
+         *
+         * @description
+         *
+         * Find a related item by id for produtoSolicitacaoBaixaEstoques.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `id` – `{*}` - PersistedModel id
+         *
+         *  - `fk` – `{*}` - Foreign key for produtoSolicitacaoBaixaEstoques
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * <em>
+         * (The remote method definition does not provide any description.
+         * This usually means the response is a `ProdutoSolicitacaoBaixaEstoque` object.)
+         * </em>
+         */
+        R.produtoSolicitacaoBaixaEstoques.findById = function() {
+          var TargetResource = $injector.get("ProdutoSolicitacaoBaixaEstoque");
+          var action = TargetResource["::findById::Usuario::produtoSolicitacaoBaixaEstoques"];
+          return action.apply(R, arguments);
+        };
+
+        /**
+         * @ngdoc method
+         * @name lbServices.Usuario.produtoSolicitacaoBaixaEstoques#updateById
+         * @methodOf lbServices.Usuario.produtoSolicitacaoBaixaEstoques
+         *
+         * @description
+         *
+         * Update a related item by id for produtoSolicitacaoBaixaEstoques.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `id` – `{*}` - PersistedModel id
+         *
+         *  - `fk` – `{*}` - Foreign key for produtoSolicitacaoBaixaEstoques
+         *
+         * @param {Object} postData Request data.
+         *
+         * This method expects a subset of model properties as request parameters.
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * <em>
+         * (The remote method definition does not provide any description.
+         * This usually means the response is a `ProdutoSolicitacaoBaixaEstoque` object.)
+         * </em>
+         */
+        R.produtoSolicitacaoBaixaEstoques.updateById = function() {
+          var TargetResource = $injector.get("ProdutoSolicitacaoBaixaEstoque");
+          var action = TargetResource["::updateById::Usuario::produtoSolicitacaoBaixaEstoques"];
+          return action.apply(R, arguments);
+        };
 
     return R;
   }]);
