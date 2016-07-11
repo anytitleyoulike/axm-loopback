@@ -21,11 +21,23 @@ angular.module('axm-loopback', ['ui.router','lbServices'])
 			controller : "FornecedorListaController"
 		})
 
+		.state('editaFornecedor',{
+			url : "/edita-fornecedor/:id",
+			templateUrl : "views/fornecedor/editaFornecedor.html",
+			controller : "FornecedorEditaController"
+		})
+
 		//Produto
 		.state('listaProduto', {
 			url : "/lista-produto",
 			"templateUrl" : "views/produto/listaProduto.html",
 			controller : "ProdutoListaController"
+		})
+
+		.state('editaProduto', {
+			url : "/edita-produto/:id",
+			"templateUrl" : "views/produto/editaProduto.html",
+			controller : "ProdutoEditaController"
 		})
 
 		.state('adicionaProduto', {
@@ -39,6 +51,12 @@ angular.module('axm-loopback', ['ui.router','lbServices'])
 			url : "/adiciona-compra",
 			templateUrl : "views/compra/adicionaCompra.html",
 			controller : "CompraAdicionaController"
+		})
+
+		.state('editaCompra', {
+			url : "/edita-compra/:id",
+			templateUrl : "views/compra/editaCompra.html",
+			controller : "CompraEditaController"
 		})
 
 		.state('listaCompra', {
@@ -60,6 +78,12 @@ angular.module('axm-loopback', ['ui.router','lbServices'])
 			controller : "UsuarioAdicionaController"
 		})
 
+		.state('editaUsuario', {
+			'url' : '/edita-usuario/:id',
+			'templateUrl' : 'views/usuario/editaUsuario.html',
+			'controller' : 'UsuarioEditaController'
+		})
+
 		.state('adicionaBaixa', {
 			url : "/adiciona-baixa",
 			templateUrl : "views/baixa/adicionaBaixa.html",
@@ -70,6 +94,12 @@ angular.module('axm-loopback', ['ui.router','lbServices'])
 			url : "/lista-baixa",
 			templateUrl : "views/baixa/listaBaixa.html",
 			controller : "BaixaListaController"
+		})
+
+		.state('editaBaixa', {
+			url : "/edita-baixa/:id",
+			templateUrl : "views/baixa/editaBaixa.html",
+			controller : "EditaBaixaController"
 		})
 
 	}]);

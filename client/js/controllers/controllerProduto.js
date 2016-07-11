@@ -32,7 +32,23 @@ angular
 			});
 		}
 
-	}]);
+	}])
+
+	.controller('ProdutoEditaController', ['$scope','$stateParams','Produto', function ($scope,$stateParams,Produto) {
+		var query = {
+			filter : {
+				where : {id : $stateParams.id}
+			}
+		};
+
+		$scope.produto = Produto.findOne(query);
+
+		$scope.editaProduto = function (obj) {
+			Produto.prototype$updateAttributes({id : obj.id}, obj, function (res) {
+				console.log(res);
+			});
+		}
+	}])
 
 
 

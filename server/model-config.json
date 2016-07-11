@@ -15,7 +15,9 @@
   },
   "Compra": {
     "dataSource": "axm-db",
-    "public": true
+    "public": true,
+    "$promise": {},
+    "$resolved": true
   },
   "Fornecedor": {
     "dataSource": "axm-db",

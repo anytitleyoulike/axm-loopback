@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+<body>
+
+<form>
+
+	<legend>Edita Fornecedor</legend>
+	<div class="form-group">
+
+		<label>Fornecedor</label>
+		<input type="text" class="form-control" ng-model="fornecedor.nome">
+
+		<label>Telefone</label>
+		<input type="text" class="form-control" ng-model="fornecedor.fone">
+
+		<label>Email</label>
+		<input type="text" class="form-control" ng-model="fornecedor.email">
+
+		<label>CPF</label>
+		<input type="text" class="form-control" ng-model="fornecedor.cpf">
+	</div>
+
+	<button type="submit" ng-click="editaFornecedor(fornecedor)" class="btn btn-primary">Salvar</button>
+
+</form>
+
+</body>
+</html>
