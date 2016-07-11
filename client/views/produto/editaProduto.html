@@ -8,6 +8,9 @@
 <form>
 
 	<legend>Edita Produto</legend>
+	<p class="alert alert-danger" ng-show="alerta">Produto existente!
+		<button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+	</p>
 	<div class="form-group">
 		<label>Produto</label>
 		<input type="text" class="form-control" ng-model="produto.nome">

@@ -15,7 +15,10 @@
           <div class="row">
 
             <div class="col col-xs-6">
-              <a href="/#/adiciona-usuario" role="button" class="btn btn-md btn-success btn-create">Adicionar Novo</a>
+              <a href="/#/adiciona-produto" role="button" class="btn btn-md btn-success btn-create">Adicionar Novo</a>
+            </div>
+            <div class="col col-xs-6">
+              <input type="text" class="form-control" placeholder="O que está buscando?" ng-model="busca">
             </div>
           </div>
           <br>
@@ -28,7 +31,7 @@
               </tr>
             </thead>
             <tbody>
-                <tr ng-repeat="produto in produtos">
+                <tr ng-repeat="produto in produtos | filter: busca">
                 	<td class="hidden-xs">{{produto.id}}</td>
 					<td>{{produto.nome}}</td>
                   	<td>

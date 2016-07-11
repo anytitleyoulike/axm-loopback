@@ -7,7 +7,7 @@ angular
 
 		function listaProduto(){
 
-			$scope.produtos={};
+			$scope.produtos=[];
 
 			Produto.find().$promise.then(function(res,err){
 				$scope.produtos = res;
@@ -19,16 +19,28 @@ angular
 
 	}])
 
-	.controller('ProdutoAdicionaController', ['$scope','$state','Produto', function($scope,$state,Produto){
+	.controller('ProdutoAdicionaController', ['$scope','$stateParams','Produto','$location', function($scope,$stateParams,Produto,$location){
 
 		$scope.form = {};
-		$scope.adicionaProduto = function(){
 
-			$scope.form.imgPath = 'path-to-img';
-			$scope.form.id = 0;
+		$scope.adicionaProduto = function(produto){
+			var q = {
+				filter : {
+					where : {nome:produto.nome}
+				}
+			};
+			// validando se já existe produto com nome igual.
 
-			Produto.create($scope.form,function(res,err){
-
+			Produto.find(q, function (res,err) {
+				if(res.length > 0) {
+					$scope.alerta = true;
+				} else {
+					$scope.form.imgPath = 'path-to-img';
+					$scope.form.id = 0;
+					Produto.create($scope.form,function(res,err){
+						$location.path('/lista-produto');
+					});
+				}
 			});
 		}
 
@@ -44,8 +56,20 @@ angular
 		$scope.produto = Produto.findOne(query);
 
 		$scope.editaProduto = function (obj) {
-			Produto.prototype$updateAttributes({id : obj.id}, obj, function (res) {
-				console.log(res);
+			var q = {
+				filter : {
+					where : {nome:obj.nome}
+				}
+			};
+
+			Produto.find(q, function (res,err) {
+				if(res.length > 0) {
+					$scope.alerta = true;
+				} else {
+					Produto.prototype$updateAttributes({id : obj.id}, obj, function (res) {
+						console.log(res);
+					});
+				}
 			});
 		}
 	}])
