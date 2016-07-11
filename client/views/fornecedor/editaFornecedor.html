@@ -8,24 +8,32 @@
 <form>
 
 	<legend>Edita Fornecedor</legend>
+	<p class="alert alert-danger" ng-show="alerta">CPF já cadastrado no sistema
+		<button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+	</p>
 	<div class="form-group">
 
 		<label>Fornecedor</label>
 		<input type="text" class="form-control" ng-model="fornecedor.nome">
 
 		<label>Telefone</label>
-		<input type="text" class="form-control" ng-model="fornecedor.fone">
+		<input type="text" id="fone" class="form-control" ng-model="fornecedor.fone">
 
 		<label>Email</label>
 		<input type="text" class="form-control" ng-model="fornecedor.email">
-
-		<label>CPF</label>
-		<input type="text" class="form-control" ng-model="fornecedor.cpf">
+		<label class="control-label">CPF</label>
+		<input type="text" id="cpf" class="form-control" ng-model="fornecedor.cpf">
 	</div>
-
 	<button type="submit" ng-click="editaFornecedor(fornecedor)" class="btn btn-primary">Salvar</button>
 
 </form>
 
 </body>
+
+<script type="text/javascript">
+	$(document).ready( function () {
+		$('#cpf').mask('000.000.000-00');
+		$('#fone').mask('00000-0000');
+	});
+</script>
 </html>

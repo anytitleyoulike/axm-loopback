@@ -24,22 +24,34 @@ angular
 		}
 	}])
 
-	.controller('FornecedorAdicionaController', ['$scope','$state','Fornecedor', function($scope,$state,Fornecedor){
+	.controller('FornecedorAdicionaController', ['$scope','$state','Fornecedor','$location', function($scope,$state,Fornecedor,$location){
 		$scope.form = {};
+		//buscando cpf existente
+		$scope.adicionaFornecedor = function(fornecedor){
+			var q = {
+				filter : {
+					where : {cpf: fornecedor.cpf}
+				}
+			};
 
-		$scope.adicionaFornecedor = function(){
-			//variável setada para definir o valor do auto increment
-			$scope.form.id = 0;
+			Fornecedor.find(q, function (res,err) {
+				 console.log(res);
+				 if(res.length > 0) {
+				 	$scope.alerta = true;
+				 } else {
+				 	$scope.alerta = false;
+					fornecedor.id = 0;
 
-			Fornecedor.create($scope.form, function(res,err) {
-				console.log(res);
-			})
-
-
+					Fornecedor.create(fornecedor, function(res,err) {
+						console.log(res);
+				 		$location.path("/lista-fornecedor");
+					})
+				 }
+			});
 		}
 	}])
 
-	.controller('FornecedorEditaController', ['$scope','$stateParams','Fornecedor', function ($scope,$stateParams,Fornecedor){
+	.controller('FornecedorEditaController', ['$scope','$stateParams','Fornecedor','$location', function ($scope,$stateParams,Fornecedor,$location){
 		$scope.fornecedor ={};
 
 		var query = {
@@ -48,12 +60,23 @@ angular
 			}
 		};
 
-		Fornecedor.findOne(query).$promise.then(function (res,err) {
-			$scope.fornecedor = res;
-		});
+		$scope.fornecedor = Fornecedor.findOne(query);
 
-		$scope.editaFornecedor = function(object) {
-			Fornecedor.upsert(object, function (res,err) {
+		$scope.editaFornecedor = function(obj) {
+			var q = {
+				filter : {
+					where : {cpf : obj.cpf}
+				}
+			}
+
+			Fornecedor.find(q, function (res,err) {
+				 if(res.length > 0) {
+				 	$scope.alerta = true;
+				 } else {
+				 	$scope.alerta = false;
+				 	Fornecedor.upsert(obj);
+				 	$location.path("/lista-fornecedor");
+				 }
 			});
 		}
 	}]);
