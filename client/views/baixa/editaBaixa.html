@@ -11,8 +11,8 @@
 	<div class="form-group">
 
 		<label>Produto</label>
-		<select  class="form-control" ng-model="baixa.produtoId" 
-		ng-options="p.id as p.nome for p in produtos">
+		<select  class="form-control" ng-model="baixa.produtoId"
+		ng-options="p.produto.id as p.produto.nome for p in produtos">
 
 		</select>
 

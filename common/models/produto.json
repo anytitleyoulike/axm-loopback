@@ -71,6 +71,11 @@
       "type": "hasMany",
       "model": "Compra",
       "foreignKey": ""
+    },
+    "produtoEstoques": {
+      "type": "hasMany",
+      "model": "ProdutoEstoque",
+      "foreignKey": ""
     }
   },
   "acls": [],

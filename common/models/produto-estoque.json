@@ -93,7 +93,13 @@
     }
   },
   "validations": [],
-  "relations": {},
+  "relations": {
+    "produto": {
+      "type": "belongsTo",
+      "model": "Produto",
+      "foreignKey": ""
+    }
+  },
   "acls": [],
   "methods": {}
 }

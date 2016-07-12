@@ -24,42 +24,59 @@ angular.module('axm-loopback')
 
 	}])
 
-	.controller('BaixaAdicionaController', ['$scope','Produto','ProdutoSolicitacaoBaixaEstoque','Usuario', function($scope,Produto,ProdutoSolicitacaoBaixaEstoque,Usuario) {
+	.controller('BaixaAdicionaController', ['$scope','ProdutoEstoque','ProdutoSolicitacaoBaixaEstoque','Usuario', function($scope,ProdutoEstoque,ProdutoSolicitacaoBaixaEstoque,Usuario) {
 		$scope.baixa = {};
 
 		 var query = {
 		 	'filter' : {
-		 		'include' : 'compra',
-		 		'where' : {'quantidade' : {'gt' : 0}}
+		 		'include' : 'produto',
 		 	}
 		 };
 
-		$scope.produtos = Produto.find(query);
+		$scope.produtos = ProdutoEstoque.find(query);
 		$scope.usuarios = Usuario.find();
-		console.log($scope.produtos);
-		$scope.adicionaBaixa = function() {
+
+		$scope.adicionaBaixa = function(baixa) {
 			$scope.baixa.di = 0;
-			console.log($scope.baixa);
-			ProdutoSolicitacaoBaixaEstoque.create($scope.baixa, function (res,err) {
-				 console.log(res);
+			var q = {
+				filter : {
+					where : {produtoId : baixa.produtoId}
+				}
+			};
+
+			ProdutoEstoque.findOne(q, function (res,err) {
+				//comparação entre a qtd solicitada <=> qtd em estoque
+				if(baixa.quantidade > res.quantidade - res.quantidadeBaixa) {
+					$scope.alerta = true;
+				console.log("Não temos produtos suficientes em estoque");
+				} else {
+					ProdutoSolicitacaoBaixaEstoque.create($scope.baixa, function (res,err) {
+						console.log(res);
+				 	});
+				}
 			});
 		}
 	}])
 
-	.controller('EditaBaixaController', ['$scope','$stateParams','ProdutoSolicitacaoBaixaEstoque','Produto','Usuario', 
-		function($scope,$stateParams,ProdutoSolicitacaoBaixaEstoque,Produto,Usuario){
+	.controller('EditaBaixaController', ['$scope','$stateParams','ProdutoSolicitacaoBaixaEstoque','ProdutoEstoque','Usuario', 
+		function($scope,$stateParams,ProdutoSolicitacaoBaixaEstoque,ProdutoEstoque,Usuario){
 		$scope.baixas = {};
 		var query = {
 			filter : {
-				where : {id: $stateParams.id}
+				include : 'produto'
 			}
-		};
-
-		$scope.produtos = Produto.find();
+		}
+		$scope.produtos = ProdutoEstoque.find(query);
 		$scope.usuarios = Usuario.find();
 
-		ProdutoSolicitacaoBaixaEstoque.findOne(query, function (res,err) {
+		var q = {
+			filter : {
+				where : {di: $stateParams.id}
+			}
+		};
+		ProdutoSolicitacaoBaixaEstoque.findOne(q, function (res,err) {
 			$scope.baixa = res;
+			console.log(res);
 		});
 
 		$scope.editaBaixa = function (obj) {

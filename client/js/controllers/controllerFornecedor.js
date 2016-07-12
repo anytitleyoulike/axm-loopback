@@ -60,6 +60,7 @@ angular
 			}
 		};
 
+		//exibe dados do fornecedor no front-end
 		$scope.fornecedor = Fornecedor.findOne(query);
 
 		$scope.editaFornecedor = function(obj) {

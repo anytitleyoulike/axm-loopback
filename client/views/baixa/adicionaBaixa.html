@@ -9,10 +9,13 @@
 
 	<legend>Nova Baixa</legend>
 	<div class="form-group">
-
+		<p class="alert alert-danger" ng-show="alerta">Quantidade indisponível em estoque
+			<button class="close" data-dismiss="alert" type="button">x</button>
+		</p>
+		
 		<label>Produto</label>
 		<select  class="form-control" ng-model="baixa.produtoId">
-			<option ng-repeat="p in produtos" value="{{p.id}}">{{p.nome}}</option>
+			<option ng-repeat="p in produtos" value="{{p.produto.id}}">{{p.produto.nome}}</option>
 		</select>
 
 		<label>Quantidade</label>
